@@ -1,0 +1,237 @@
+@import "mixins", "variables", "functions", "media";
+
+body,
+html {
+    overflow-x: hidden;
+    font-size: 100%;
+    height: 100%;
+	width: 100%;
+    margin: 0;
+	@include max-screen($widescreen) {
+		font-size: 95%;
+	}
+	@media (max-width: $desktop) {
+		font-size: 90%;
+	}
+	@include max-screen($tablet) {
+		font-size: 85%;
+	}
+}
+
+body {
+	
+	@include display-flex;
+    @include flex-direction(column);
+    flex: 1 0 auto;
+	color: $base-text-color;
+	background: $base-background-body;
+	font: #{$font_size_base}/#{$line_height_base} $base-font-family;
+	min-width: $base-min-width;
+	margin: 0;
+	padding: 0
+}
+ 
+footer {
+    flex: 0 0 auto;
+}
+footer {
+    flex: 0 0 auto;
+}	
+
+.container {
+    margin: 0 auto;
+    padding: $base_container_padding;
+    width: 100%;
+    // max-width: 1145px;
+}
+
+.section {
+    position: relative;
+}
+
+.container {
+	max-width: 1260px;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+.center {
+    text-align: center;
+	&-block {
+		margin: 0 auto;
+	}
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+
+
+.flex {
+    @include display-flex;
+}
+
+.flex-column {
+    @include display-flex;
+    @include flex-direction(column);
+}
+
+
+.flex-h-center {
+    @include align-items(center);
+}
+.flex-h-top {
+    @include align-items(flex-start);
+}
+.flex-h-bottom {
+    @include align-items(flex-end);
+}
+
+.flex-v-center {
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.flex-center {
+	@include display-flex;
+	justify-content: center;
+	@include align-items(center);
+}
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+.flex-bottom {
+    margin-top: auto;
+}
+
+.flex-wrap {
+    @include flex-wrap(wrap);
+}
+.box {
+	&-flex {
+		@include display-flex;
+		> div {
+			width: 50%;
+		}
+		@include max-screen($phone) {
+			@include flex-direction(column);
+			> div {
+				width: 100%;
+			}
+		}
+	} 
+}
+.txt{
+	&-white {
+		color: $white;
+	}
+	&-gray {
+		color: $dark_gray;
+	}
+	&-dgray {
+		color: $dark_txt_color;
+	}
+	&-dblue {
+		color: $dark_blue;
+	}
+	&-error {
+		color: $danger;
+	}
+	&-lgray {
+		color: $grey_light_txt_color;
+	}
+	&-sucess {
+		color: $primary;
+	}
+	&-gr-bl {
+		color: $gray_as_black;
+	}
+}
+
+.fw-400 {
+	font-weight: $normal;
+}
+.fw-500 {
+	font-weight: $medium;
+}
+.fw-600 {
+	font-weight: $semibold;
+}
+.fw-700 {
+	font-weight: $bold;
+}
+
+.link {
+	&--green {
+		color: $primary;
+		// &:hover {
+		// 	color: darken($primary, 12%);;
+		// }
+	}
+}
+.tablet-none {
+	@include max-screen($tablet) {
+		display: none;
+	}
+}
+.section {
+	&-first {
+		padding-top: 20px;
+	}
+}
+
+.sz {
+	&-10 {
+		font-size: 10px;
+		line-height: 12px;
+	}
+	&-12 {
+		font-size: 12px;
+		line-height: 18px;
+	}
+	&-14 {
+		font-size: 12px;
+		line-height: 24px;
+	}
+	&-24 {
+		font-size: 24px;
+	}
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+.mt {
+	&-10 {
+		margin-top: 10px;
+	}
+}
+.mb {
+	&-15 {
+		margin-bottom: 15px;
+	}
+	&-30 {
+		margin-bottom: 30px;
+	}
+}
+.ml {
+	&-5 {
+		margin-left: 5px;
+	}	
+	&-30 {
+		margin-left: 30px;
+	}	
+	&-40 {
+		margin-left: 40px;
+	}	
+	&-155 {
+		margin-left: 155px;
+	}	
+}

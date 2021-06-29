@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>darfiXchange</title>
+        <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/style.min.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header__container">
+                    <div class="logo__container">
+                        <a href="#" class="logo__link">
+                            <picture>
+                                <source srcset="./img/logo/logo_dafri.svg" type="image/webp" />
+                                <img src="./img/logo/logo_dafri.svg" class="logo__img" alt="dafrixchange" height="175" width="54" />
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="menu-btn">
+                        <div class="menu-btn__burger"></div>
+                    </div>
+                    <div class="navigation__wrapper">
+                        <nav class="navigation">
+                            <ul class="navigation__list">
+                                <li class="navigation__item">
+                                    <a href="#" class="navigation__link">Why us</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="#" class="navigation__link">Trade</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="#" class="navigation__link">Wallet</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="#" class="navigation__link">DeFi</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="#" class="navigation__link">Payment agent</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a href="#" class="navigation__link">Support</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="account__wrapper">
+                            <ul class="account__list">
+                                <li class="account__item">
+                                    <a href="#" class="account__link">Sign in</a>
+                                </li>
+                                <li class="account__item">
+                                    <a href="#" class="btn btn-primary btn-l">Register</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+			<section class="section section-sign">
+                <div class="container">
+                    <div class="section-inner">
+                        <div class="section__container flex">
+                            <div class="info__block">
+                                <div class="info__header">
+                                    <h1 class="txt-white">Buy & store cryptocurrency with ease</h1>
+                                </div>
+                                <div class="info__content">
+                                    <div class="info__item flex flex-v_center">
+                                        <div class="info__img flex-center">
+                                            <img src="./img/icons/buy.svg" alt="buy description">
+                                        </div>
+                                        <div class="info__txt">
+                                            <h4 class="txt-white">Buy</h4>
+                                            <p class="txt-lgray sz-14">Security is our priority and our buy feature is a reliable and safe method to purchase cryptocurrencies. It is a fast and easy way to make your transactions.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info__content">
+                                    <div class="info__item flex flex-v_center">
+                                        <div class="info__img flex-center">
+                                            <img src="./img/icons/trade.svg" alt="trade description">
+                                        </div>
+                                        <div class="info__txt">
+                                            <h4 class="txt-white">Trade</h4>
+                                            <p class="txt-lgray sz-14">We provide a lightning fast trading platform with maximum accuracy of order matching. Our trading platform gives the maximum control and transparency to the users.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info__content">
+                                    <div class="info__item flex flex-v_center">
+                                        <div class="info__img flex-center">
+                                            <img src="./img/icons/basket.svg" alt="store  description">
+                                        </div>
+                                        <div class="info__txt">
+                                            <h4 class="txt-white">Store</h4>
+                                            <p class="txt-lgray sz-14">You can transact and keep multiple coins in our store without any hassle. We provide quick transfer and updation of the coins with a secure deposit and withdrawl method.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info__form">
+                                <div class="form__wrapper">
+                                    <div class="form__header">
+                                        <h2 class="form__title txt-dgray">Sign in</h2>
+                                    </div>
+                                    <form action="" method="post" class="form">
+                                        <div class="tab__wrapper flex">
+                                            <div class="tab__pannel flex">
+                                                <buttton class="tab__button active">Email</buttton>
+                                                <buttton class="tab__button">Mobile</buttton>
+                                            </div>
+                                        </div>
+                                        <div class="form__content">
+                                            <div class="input__wrapper">
+                                                <div class="input__inside">
+                                                    <input class="input input--success" type="text" placeholder="Enter your email">
+                                                    <div class="error txt-error sz-10">This mail is not registered</div>
+                                                </div>
+                                            </div>
+                                            <div class="input__wrapper">
+                                                <div class="input__inside">
+                                                    <input class="input" type="password" placeholder="Enter your password">
+                                                    <div class="error txt-error sz-10">This mail is not registered</div>
+                                                    <div class="show-password"></div>
+                                                </div>
+                                            </div>
+                                            <div class="input__wrapper--password">
+                                                <a href="#" class="link--purple fw-500">Forgot password?</a>
+                                            </div>
+                                            <div class="input__wrapper">
+                                                <div class="input__inside">
+                                                    <input class="input" type="text" placeholder="Google Authenticator Code (2FA)">
+                                                    <div class="error txt-error sz-10">This mail is not registered</div>
+                                                </div>       
+                                            </div>
+                                            <div class="input__wrapper--account right">
+                                                <span class="txt-gray sz-12 fw-500">Dont have an account? </span><a href="#" class="link--green sz-12">Sign up</a>
+                                            </div>
+                                            <div class="input__wrapper">
+                                                <button type="submit" class="btn btn-lg fw-500 btn-rd-lg btn-gradient">Sign in</a>
+                                            </div>
+                                            <div class="input__wrapper center">
+                                                <a href="#" class="link--green sz-12 fw-600">Need to reset 2FA?</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__container flex">
+                    <div class="footer__left">
+                        <div class="logo__container">
+                            <a href="#" class="logo__link">
+                                <picture>
+                                    <source srcset="./img/logo/logo_dafri.svg" type="image/webp" />
+                                    <img src="./img/logo/logo_dafri.svg" class="logo__img" alt="dafrixchange" height="175" width="54" />
+                                </picture>
+                            </a>
+                        </div>
+                        <ul class="footer__logo-list flex">
+                            <li class="footer__logo-item">
+                                <a href="#" class="footer__logo-link">
+                                    <picture>
+                                        <source srcset="./img/logo/pci-seal.svg" type="image/webp" />
+                                        <img src="./img/logo/pci-seal.svg" class="logo__pci" alt="logo pci dss" />
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="footer__logo-item">
+                                <a href="#" class="footer__logo-link footer__logo-link--margin">
+                                    <picture>
+                                        <source srcset="./img/logo/secure-seal.svg" type="image/webp" />
+                                        <img src="./img/logo/secure-seal.svg" class="logo__pci" alt="logo thwte" style="margin-top: 3px;" />
+                                    </picture>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__center flex">
+                        <div class="office__wrapper">
+                            <div class="office__block">
+                                <span class="office__name fw-700">Johannesburg Office</span>
+                                <ul class="office__list">
+                                    <li class="office__item">8 Riversands Boulevard, Riversands,</li>
+                                    <li class="office__item">Johannesburg</li>
+                                    <li class="office__item">South Africa</li>
+                                    <li class="office__item">1684</li>
+                                    <li class="office__item office__item--margin">
+                                        <a href="#" class="office__link fw-700">View on Google Maps</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="office__block">
+                                <span class="office__name fw-700">Eastern Cape office</span>
+                                <ul class="office__list">
+                                    <li class="office__item">17 Aloe Street, Fortgale,</li>
+                                    <li class="office__item">Mthatha, Eastern Cape,</li>
+                                    <li class="office__item">South Africa</li>
+                                    <li class="office__item">5100</li>
+                                    <li class="office__item office__item--margin">
+                                        <a href="#" class="office__link fw-700">View on Google Maps</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="navigation__wrapper">
+                            <nav class="navigation">
+                                <ul class="navigation__list navigation__list--columns">
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Why us</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Buy DBA</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Trade</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">DeFi</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Payment agent</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Blog</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Learning Portal</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Affiliate</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Careers</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">FAQ</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <nav class="navigation">
+                                <ul class="navigation__list">
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Legal</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Privacy Policy and Terms of Use</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">AML/KYC Policy</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Listing & Delisting Policy</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Security</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="footer__right">
+                        <ul class="contact__list">
+                            <li class="contact__item">
+                                <span class="contact__mark">t /</span>
+                                <a href="tel:+27115685053" class="contact__link">+27 11 568 5053</a>
+                            </li>
+                            <li class="contact__item">
+                                <span class="contact__mark">e /</span>
+                                <a href="mailto:info@dafriexchange.com" class="contact__link">info@dafriexchange.com</a>
+                            </li>
+                        </ul>
+                        <ul class="social__list right">
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <picture>
+                                        <source srcset="./img/logo/facebook.svg" type="image/webp" />
+                                        <img src="./img/logo/facebook.svg" alt="facebook logo" />
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <picture>
+                                        <source srcset="./img/logo/tvitter.svg" type="image/webp" />
+                                        <img src="./img/logo/tvitter.svg" alt="twitter logo" />
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <picture>
+                                        <source srcset="./img/logo/linkedin.svg" type="image/webp" />
+                                        <img src="./img/logo/linkedin.svg" alt="linkedin logo" />
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <picture>
+                                        <source srcset="./img/logo/instagram.svg" type="image/webp" />
+                                        <img src="./img/logo/instagram.svg" alt="instagram logo" />
+                                    </picture>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="copyright">
+                            <p>DafriXchange™. All rights reserved.</p>
+                            <p>A DafriGroup PLC company</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js"></script>
+        <script src="js/script.min.js"></script>
+    </body>
+</html>

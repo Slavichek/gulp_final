@@ -1,0 +1,244 @@
+@import "../base/reset",
+		"../base/custom",
+		"../base/mixins",
+		"../base/functions",
+		"../base/variables",
+		"../base/typography",
+		"../base/helpers",
+		"../base/media",
+
+		"../components/buttons",
+		"../components/forms";
+
+.footer {
+	background: $bg_black;
+	color: $dark_gray;
+	font-size: 14px;
+	.container {
+		max-width: 1260px;
+	}
+	&__left,
+	&__right {
+		width: 25%;
+		@include max-screen($tablet) {
+			width: 100%;
+		}
+	}
+	&__left {
+		@include max-screen($desktop) {
+			width: 100%;
+			@include display-flex;
+			@include justify-content(space-between);
+			margin-bottom: 40px;
+		}
+	}	
+
+	&__right {
+		text-align: right;
+		@include max-screen($desktop) {
+			width: 100%;
+			@include display-flex;
+			@include justify-content(space-between);
+			margin-top: 40px;
+		}
+		@include max-screen($tablet) {
+			@include flex-direction(column);
+			text-align: left;
+		}
+	}
+	&__center {
+		flex: 1;
+		@include justify-content(space-between);
+		@include max-screen($desktop) {
+			margin-bottom: 25px;
+		}
+	}
+	&__container {
+		position: relative;
+		padding:  rem-calc(60 0 55);
+		@include max-screen($desktop) {
+			@include flex-direction(column);
+		}
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 3px;
+			border-radius: $btn_border_radius;
+			background:#2A2A2E;
+			top: 0;
+			left: 0;
+			z-index: 2;
+		}
+	}
+	.logo {
+		&__container {
+			margin-bottom: rem-calc(90);
+			@include max-screen($desktop) {
+				margin-bottom: 0;
+			}
+		}
+		&__img {
+			width: 175px;
+			height: 54px;
+		}
+	}
+	&__logo {
+		&-item {
+			& + & {
+				margin-left: rem-calc(20);
+			}
+			@include max-screen($phone) {
+				@include display-flex;
+				@include align-items(center);
+
+			}
+		}
+		&-link {
+			display: inline-block;
+			&--margin {
+				padding-top: 5px;
+			}
+			
+		}
+	}
+	.navigation {
+		&__list {
+			&--columns {
+				column-count: 2;
+				margin-bottom: rem-calc(50);
+			}
+		}
+		&__item {
+			display: block;
+			&:not(:last-child) {
+				margin-bottom: rem-calc(20);
+			}
+		}
+		&__link {
+			color: $dark_gray;
+			&:hover {
+				color: $white;
+			}
+			@include max-screen($phone) {
+				font-size: 8px;
+			}
+		}
+	}
+}
+
+.office {
+	&__block {
+		& + & {
+			margin-top: rem-calc(40);
+		}
+	}
+	&__name {
+		font-size: 16px;
+		display: block;
+		margin-bottom: rem-calc(20);
+		@include max-screen($phone) {
+			font-size: 10px;
+		}
+	}
+	&__item {
+		margin-bottom: rem-calc(12);
+		&:last-of-type {
+			margin-top: rem-calc(20);
+		}
+		@include max-screen($phone) {
+			font-size: 10px;
+		}
+		
+	}
+	&__link	{
+		background: #66DC91;
+		background: -webkit-linear-gradient(to right, #66DC91 0%, #53B9AB 100%);
+		background: -moz-linear-gradient(to right, #66DC91 0%, #53B9AB 100%);
+		background: linear-gradient(to right, #66DC91 0%, #53B9AB 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-size:  rem-calc(16);
+		border-bottom: 2px solid transparent;
+ 		&:hover {
+			border-bottom: 2px solid $primary;
+		}
+		@include max-screen($phone) {
+			font-size: 10px;
+		}
+	}
+}
+
+.contact {
+	&__list {
+		margin-bottom: rem-calc(110);
+		@include max-screen($desktop) {
+			margin-bottom: 0;
+			text-align: left;
+		}
+		@include max-screen($tablet) {
+			margin-bottom: 15px;
+		}
+	}
+	&__item {
+		& + & {
+			margin-top: rem-calc(20);
+		}
+	}
+	&__link {
+		color: $dark_gray;
+		&:hover {
+			color: $white;
+		}
+		@include max-screen($phone) {
+			font-size: 10px;
+		}
+		
+	}
+	&__mark {
+		color: $primary;
+		@include max-screen($phone) {
+			font-size: 10px;
+		}
+	}
+}
+.social {
+	&__list {
+		display: flex;
+		@include justify-content(flex-end);
+		margin-bottom:rem-calc(50);
+		@include max-screen($desktop) {
+			margin-bottom: 0;
+		}
+		@include max-screen($tablet) {
+			order: -1;
+			@include justify-content(flex-start);
+			margin-bottom: 15px;
+		}
+			
+
+	}
+	&__item:not(:last-child) {
+		margin-right: 15px;
+	}
+}
+
+.copyright {
+	@include max-screen($tablet) {
+		@include display-flex;
+		p + p {
+			margin-top: 0;
+		}
+	}
+	@include max-screen($phone) {
+		font-size: 10px;
+	}
+
+}
+
+
+
+
+
+

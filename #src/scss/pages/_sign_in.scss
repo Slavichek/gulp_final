@@ -1,0 +1,20 @@
+@import "../base/reset",
+		"../base/custom",
+		"../base/mixins",
+		"../base/functions",
+		"../base/variables",
+		"../base/typography",
+		"../base/helpers",
+		"../base/media",
+
+		"../components/buttons",
+		"../components/checkbox";
+
+.cred {
+    &-extra {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+

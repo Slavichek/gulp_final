@@ -1,0 +1,159 @@
+@import "../base/reset",
+		"../base/custom",
+		"../base/mixins",
+		"../base/functions",
+		"../base/variables",
+		"../base/typography",
+		"../base/helpers",
+		"../base/media",
+
+		"../components/buttons",
+		"../components/forms";
+
+.section {
+	&-started {
+		position: relative;
+		padding-top: rem-calc(400);
+		@include max-screen($desktop) {
+			padding-top: rem-calc(250);
+			margin-top: rem-calc(100);
+		}
+		@include max-screen($tablet) {
+			padding-top: rem-calc(250);
+			margin-top: rem-calc(150);
+		}
+		@include max-screen($phone) {
+			padding-top: rem-calc(90);
+			// margin-top: rem-calc(150);
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			// background: url('../assets/images/vawe/vawe_top.png');
+			background: url("data:image/svg+xml,%3Csvg width='1934' height='518' viewBox='0 0 1934 518' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M1934 2854.01L-0.000393922 2854.02L-0.000433118 1329.44L-0.000488281 -0.000854492C-0.000488281 -0.000854492 488.874 415.545 1082.5 212.791C1676.13 10.0361 1934 497.905 1934 497.905V1378.93V2854.01Z' fill='%23121214'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='1934' height='518' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat bottom left;
+			background-size: cover;
+			z-index: 2;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 540px;
+			// height: rem-calc(400);
+			@include max-screen($desktop) {
+				height: rem-calc(300);
+				background-size: cover;
+			}
+			@include max-screen($phone) {
+				height: 90px;
+			}		
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			width: rem-calc(587);
+			height: rem-calc(386);
+			background: url("data:image/svg+xml,%3Csvg width='708' height='904' viewBox='0 0 708 904' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath opacity='0.2' d='M434.245 37.1487C663.372 135.583 769.318 401.124 670.884 630.25C572.449 859.376 306.909 965.323 77.7825 866.888C-151.344 768.454 -257.29 502.913 -158.856 273.787C-60.4214 44.6608 205.119 -61.2858 434.245 37.1487Z' fill='url(%23paint0_linear)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='287.994' y1='-76.5748' x2='490.778' y2='276.866' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%232DDD9D'/%3E%3Cstop offset='1' stop-color='white' stop-opacity='0'/%3E%3C/linearGradient%3E%3CclipPath id='clip0'%3E%3Crect width='708' height='904' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+			// background: url('../assets/images/vawe/circle_green.png');
+			background-size: cover;
+			z-index: 1;
+			left: 0;
+			top: 0;		
+			@include max-screen($tablet) {
+				display: none;
+			}	
+		}
+		
+		.container {
+			max-width: 1200px;
+			position: relative;
+			z-index: 5;
+		}
+	}
+}
+.started {
+	&__wrapper {
+		position: relative;
+	}
+	&__container {
+		@include max-screen($tablet) {
+			@include flex-direction(column);
+			@include flex-wrap(wrap);
+
+		}
+	}
+	&__info	{
+		width: 50%;
+		@include max-screen($tablet) {
+			width: 100%;
+			position: relative;
+			margin-top: rem-calc(-320);
+		}
+		@include max-screen($phone) {
+			margin-top: -180px;
+		}
+	}
+	&__img {
+		&-wrapper {
+			width: 50%;
+			position: relative;
+			@include max-screen($tablet) {
+				width: 100%;
+			}
+		}
+		&-holder {
+			// position: absolute;
+			position: relative;
+			margin-top: rem-calc(-350);
+			width: 100%;
+			left: -50px;
+			// padding-top: rem-calc(800);
+			// background: url('../assets/images/mobile/mobile_started.png') center;
+		 	// background-size: contain;
+			background-repeat: no-repeat;
+			@include max-screen($desktop) {
+				left: 0;
+			}
+			@include max-screen($tablet) {
+				position: static;
+				margin-top: 0;
+				// padding-top: rem-calc(600);
+			}
+			@include max-screen($tablet) {
+				margin-top: rem-calc(-50);
+				// padding-top: rem-calc(385);
+			}
+			
+		}
+	}
+	&__holder {
+		background: $bg_black;
+		padding-bottom: rem-calc(100);
+		@include max-screen($desktop) {
+			padding-bottom: rem-calc(150);
+		}
+		@include max-screen($desktop) {
+			padding-bottom: rem-calc(80);
+		}
+	}
+	
+	&__title {
+		&.txt-white {
+			@include max-screen($tablet) {
+				color: $black;
+			}
+		}
+	}
+	&__subtitle {
+		margin-bottom: rem-calc(35);
+	}
+	&__footer {
+		display: none;
+		@include max-screen($tablet) {
+			display: block;
+			margin-top: 40px;
+		}
+		@include max-screen($phone) {
+			text-align: center;
+		}
+
+	}
+}

@@ -1,0 +1,168 @@
+@import "../base/reset",
+		"../base/custom",
+		"../base/mixins",
+		"../base/functions",
+		"../base/variables",
+		"../base/typography",
+		"../base/helpers",
+		"../base/media",
+
+		"../components/buttons",
+		"../components/forms";
+
+.section {
+	&-slider {
+		position: relative;
+		.container {
+			max-width: 1050px;
+		}
+		.swiper {
+			&-container {
+				min-width: 0;
+				position: relative;
+				z-index: 10;
+				@include align-items(center);
+				@include max-screen($desktop) {
+					@include flex-direction(column);
+				}
+			}
+			&-wrapper {
+				width: 43%;
+				@include max-screen($desktop) {
+					width: 100%;
+				}
+			}
+			
+			&__panel {
+				position: relative;
+				margin-top: 105px;
+				flex: 1;
+				@include justify-content(center);
+				background: $white;
+				padding: 50px 30px;
+				@include max-screen($desktop) {
+					margin-top: -10px;
+				}
+				@include max-screen($phone) {
+					padding: 50px 0;
+					margin-top: 10px;
+				}
+			}
+			&__img {
+				@include max-screen($desktop) {
+					margin: 0 auto;
+				}
+				@include max-screen($phone) {
+					width: 60%;
+				}
+
+			}
+			&__header {
+				margin-bottom: rem-calc(45);
+			}	
+			&__controls {
+				@include justify-content(space-between);
+			}
+			&-pagination {
+				position: static;
+				margin-top: -1px;
+				@include max-screen($desktop) {
+					margin-top: 2px;
+				}
+			}
+			&__prev,
+			&__next {
+				position: relative;
+				z-index: 10;
+				width: 44px;
+				height: 27px;
+				opacity: .5;
+				@include animate(all, $animation_speed, linear);
+				&:hover {
+					opacity: 1;
+				}
+			}
+			&__next {
+				transform: scaleX(-1);
+			}
+			&-container {
+				&-horizontal {
+					.swiper-pagination {
+						&-bullet {
+							position: relative;
+							border-radius: 2px;
+							display: inline-block;
+							opacity: 1;
+							height: 4px;
+							width: 116px;
+							background: #DEE2E2;;
+							margin-right: 5px;
+							@include max-screen($phone) {
+								width: 60px;
+							}
+							&.swiper-pagination-bullet-active {
+								background: $primary;
+							}
+							&:hover {
+								box-shadow: 0px 0px 7px 2px #7DFFAB;
+							}
+							mark {
+								position: absolute;
+								left: 50%;
+								transform: translateX(-50%);
+								bottom: 5px;
+								width: 100%;
+								color: $primary;
+								visibility: hidden;
+								font-size: 24px;
+								@include max-screen($phone) {
+									font-size: 16px;
+								}
+							}
+							&-active {
+								mark {
+									visibility: visible;
+								}
+							}
+						}
+
+					}
+				}
+			}
+			&-slide {
+				img {
+					visibility: hidden;
+					opacity: 0;
+					transition: opacity 1.5s ease;
+				}
+				&-active {
+					img {
+						visibility: visible;
+						opacity: 1;
+					}
+				}
+			} 
+		}
+		.slider {
+			&__txt {
+				&-holder {
+					width: calc(100% - 444px);
+					align-self: center;
+    				margin-top: -85px;
+					position: relative;
+					@include max-screen($desktop) {
+						margin-top: 50px
+					}
+					@include max-screen($tablet) {
+						width: 100%;
+					}
+				}
+			}
+			&__content {
+				@include max-screen($desktop) {
+					flex-direction: column;
+				}
+			}
+		}
+	}
+}

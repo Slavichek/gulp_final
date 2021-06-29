@@ -1,0 +1,69 @@
+@import "./base/mixins",
+		"./base/functions",
+		"./base/variables",
+		"./base/media";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $headings-font-family;
+	color: $dark_txt_color
+	
+}
+
+h1 {
+	@include em-font-size(72);
+	line-height: (82 / 72);
+	font-weight: $headings_font_weight;
+	@include max-screen($phone) {
+		font-size: 30px;
+		line-height: 40px;
+	}
+}
+h2 {
+	@include em-font-size(44);
+	line-height: (54 / 44);
+	font-weight: $semibold;
+	@include max-screen($phone) {
+		font-size: 26px;
+		line-height: (36 /26);
+	}
+	&.form__title {
+		font-size: 24px;
+		line-height: 34px;
+ 	}
+}
+h3 {
+	@include em-font-size(30);
+	line-height: (46 / 30);
+	font-weight: $normal;
+	@include max-screen($phone) {
+		font-size: 18px;
+		line-height: 28px;
+	}
+}
+h4 {
+	@include em-font-size(24);
+	line-height: (34 / 24);
+	font-weight: $normal;
+	@include max-screen($phone) {
+		font-size: 16px;
+		line-height: 26px;
+	}
+}
+// p {
+// 	@include em-font-size(16);
+// 	line-height: (26 / 16);
+// }
+p + p {
+	margin-top: rem-calc(10);
+}
+
+mark {
+	background: transparent;
+	color: $dark_gray;
+}
+

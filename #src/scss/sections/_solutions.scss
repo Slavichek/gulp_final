@@ -1,0 +1,97 @@
+@import "../base/reset",
+		"../base/custom",
+		"../base/mixins",
+		"../base/functions",
+		"../base/variables",
+		"../base/typography",
+		"../base/helpers",
+		"../base/media",
+
+		"../components/buttons",
+		"../components/forms";
+
+.section {
+	&-solutions {
+		position: relative;
+		margin-bottom: rem-calc(135);
+		@include max-screen($desktop) {
+			margin-top: rem-calc(55);
+		}
+		@include max-screen($phone) {
+			margin-bottom: rem-calc(40);
+		}
+		.container {
+			max-width: 1260px;
+			position: relative;
+			z-index: 2;
+		}
+	}
+}
+.solutions {
+	&__wrapper {
+		position: relative;
+		margin-top: -200px;
+		background: $white;
+		box-shadow: 0px 20px 40px rgba(133, 132, 136, 0.1);
+		border-radius: $card_border_radius_lg;
+		padding: rem-calc(65 95 100);
+		@include max-screen($desktop) {
+			margin-top: 0;
+			padding: rem-calc(65 50);
+		}
+		@include max-screen($phone) {
+			padding: rem-calc(28);
+		}
+	}
+	&__header {
+		width: 43%;
+		margin-left: auto;
+		margin-bottom: rem-calc(70);
+		@include max-screen($desktop) {
+			width: 100%;
+			h2 {
+				text-align: center;
+			}
+		}
+	}
+	&__row {
+		width: 100%;
+		@include display-flex;
+		@include justify-content(space-between);
+		@include max-screen($phone) {
+			@include flex-wrap(wrap);
+		}
+		& + & {
+			margin-top: rem-calc(46);
+			@include max-screen($phone) {
+				margin-top: rem-calc(25);
+			}
+		}
+	}
+	&__item {
+		width: 45%;
+		@include align-items(flex-start);
+		@include max-screen($desktop) {
+			width: 48%;
+		}
+		@include max-screen($phone) {
+			width: 100%;
+			& + & {
+				margin-top: rem-calc(25);
+			}
+		}
+		
+	}
+	&__img {
+		width: 40px;
+		height: 40px;
+		margin-right: rem-calc(26);
+	}
+	&__txt {
+		font-size: rem-calc(24);
+		@include max-screen($phone) {
+			font-size: 12px;
+		}
+		
+	}
+}

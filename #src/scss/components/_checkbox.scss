@@ -1,0 +1,92 @@
+@import "../base/reset",
+		"../base/custom",
+		"../base/mixins",
+		"../base/functions",
+		"../base/variables",
+		"../base/typography",
+		"../base/helpers",
+		"../base/media",
+
+		"../components/buttons";
+
+
+
+.check {
+    &-wrap {
+        display: flex;
+    }
+}
+.new-check:checked,
+.new-check:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.new-check:checked + label, .new-check:not(:checked) + label {
+    width: 100%;
+    min-height: 32px;
+    position: relative;
+    padding-left: 30px;
+}
+.new-check + label {
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 30px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.new-check + label, .new-check+label .check-icon {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-align-items: center;
+}
+.new-check:checked+label:before, .new-check:not(:checked)+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border: 1px solid #DDD;
+    background: #fff;
+    border-radius: 3px;
+}
+.new-check:checked+label .check-icon {
+    opacity: 1;
+}
+.new-check+label .check-icon {
+    position: absolute;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    left: 3px;
+    width: 10px;
+    height: 10px;
+}
+.change-info--features:after, .new-check+label .check-icon {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+.new-check+label, .new-check+label .check-icon {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-align-items: center;
+}
+.new-check+label .check-icon svg {
+    width: 100%;
+    height: 100%;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+.new-check:not(:checked)+label .check-icon {
+    opacity: 0;
+}
